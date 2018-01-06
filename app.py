@@ -17,7 +17,6 @@ if __name__ == "__main__":
 @app.route('/upload', methods=['POST'])
 def upload():
     imageFile = request.files['file']
-    # bp()
     image = imageFile.read().encode('base64').replace('\n', '')
     return render_template("display.html", image = image)
 
