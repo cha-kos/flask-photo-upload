@@ -19,11 +19,12 @@ class UploadTestCase(unittest.TestCase):
     def test_photo_upload(self):
 
         with open('test_files/test_image.jpg') as test:
-            imgStringIO = StringIO.StringIO(test.read())
+            test_image = StringIO.StringIO(test.read())
             test.close()
 
-        upload = self.app.post('/upload', data = {'file': (imgStringIO, 'test.jpg')}, follow_redirects=True)
-        assert upload.status == '200 OK'
+        upload = self.app.post('/upload', data = {'file': (test_image, 'test.jpg')}, follow_redirects=True)
+        converted_test_image = test_image.encode('base64').replace('\n', '')
+        assert converted_test_image in upload.data
 
 if __name__ == '__main__':
     unittest.main()
