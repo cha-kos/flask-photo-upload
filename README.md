@@ -18,7 +18,7 @@ Activate your virtualenv with the command
 
 `source env/bin/activate`
 
-Download package dependencies by with the command
+Download package dependencies with the command
 
 `pip install -r requirements.txt`
 
