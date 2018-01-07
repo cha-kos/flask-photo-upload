@@ -18,7 +18,7 @@ if __name__ == "__main__":
 def upload():
     imageFile = request.files['file']
 
-    # encode image to base64 to place directly inline inside html <img/>
+    # encode image to base64 so we can place directly inline inside html <img/>
     image = imageFile.read().encode('base64').replace('\n', '')
     return render_template("display.html", image = image)
 
