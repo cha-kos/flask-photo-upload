@@ -2,6 +2,6 @@ language: python
 python:
   - "2.7"
 install:
-  - pip install -e ~/flask
+  - pip install -r requirements.txt
 script:
-  - py.test
+  - python photo_upload_test.py
