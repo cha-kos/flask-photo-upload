@@ -3,7 +3,7 @@ import app
 import unittest
 import tempfile
 import StringIO
-from PIL import Image
+# from PIL import Image
 from pdb import set_trace as bp
 
 class UploadTestCase(unittest.TestCase):
