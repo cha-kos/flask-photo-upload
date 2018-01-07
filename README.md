@@ -10,14 +10,14 @@ A simple photo upload form built using Flask.
 
 In order to run this app locally, first clone or download the repository and navigate to the root directory of the project from your command line.
 
-Create your virtualenv by running the command
+Create your virtualenv by running the command \n
 `virtualenv env`
 
-Activate your virtualenv with the command
+Activate your virtualenv with the command \n
 `source env/bin/activate`
 
-Download package dependencies by with the command
+Download package dependencies by with the command \n
 `pip install -r requirements.txt`
 
-Start up local server with the command
+Start up local server with the command \n
 `gunicorn app:app`
