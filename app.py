@@ -6,8 +6,8 @@ from pdb import set_trace as bp
 
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-@app.route('/')
 
+@app.route('/')
 def index():
     return render_template('upload.html')
 
